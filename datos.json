@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "nombre": "Yaaj México",
+        "categoria": "Legal y Psicológico",
+        "telefono": "55 8312 9158",
+        "sitio_web": "https://yaajmexico.org",
+        "descripcion": "Protección de DDHH, acompañamiento legal y psicológico.",
+        "historia": "Fundada para proteger los Derechos Humanos de las juventudes LGBTI+ y combatir las terapias de conversión (ECOSIG).",
+        "ubicacion": "CDMX (Diversas sedes y atención en línea).",
+        "tipo_ayuda": ["Acompañamiento legal", "Atención psicológica afirmativa", "Redes de jóvenes"]
+    },
+    {
+        "id": 2,
+        "nombre": "Casa de las Muñecas Tiresias",
+        "categoria": "Refugio y Asistencia",
+        "telefono": "55 5546 4504",
+        "sitio_web": "https://www.casadelasmunecas.org",
+        "descripcion": "Refugio seguro y apoyo integral para personas trans.",
+        "historia": "Asociación civil transfeminista fundada por la activista Kenya Cuevas para apoyar a personas en situación de alta vulnerabilidad.",
+        "ubicacion": "Albergue Casa Hogar Paola Buenrostro, CDMX.",
+        "tipo_ayuda": ["Refugio temporal", "Reinserción social y laboral", "Atención médica"]
+    },
+    {
+        "id": 3,
+        "nombre": "Clínica Especializada Condesa",
+        "categoria": "Salud Integral",
+        "telefono": "55 5272 2808",
+        "sitio_web": "http://condesacdmx.mx",
+        "descripcion": "Atención médica pública, detección de ITS/VIH y salud trans.",
+        "historia": "Institución pública del Gobierno de la CDMX referente a nivel nacional en prevención y atención de la salud sexual.",
+        "ubicacion": "Sedes en Col. Condesa e Iztapalapa, CDMX.",
+        "tipo_ayuda": ["Tratamiento VIH/ITS", "Terapia de reemplazo hormonal (TRH)", "Apoyo psiquiátrico"]
+    },
+    {
+        "id": 4,
+        "nombre": "Cuenta Conmigo A.C.",
+        "categoria": "Apoyo Psicológico",
+        "telefono": "55 5563 4672",
+        "sitio_web": "https://cuentaconmigo.org.mx",
+        "descripcion": "Terapias, talleres familiares y contención emocional.",
+        "historia": "Nace para brindar espacios de diálogo seguros que promuevan la salud sexual y el bienestar de familias y juventudes diversas.",
+        "ubicacion": "Dr. Andrade #191, Col. Doctores, CDMX.",
+        "tipo_ayuda": ["Terapias individuales", "Talleres para padres", "Acompañamiento en salida del clóset"]
+    },
+    {
+        "id": 5,
+        "nombre": "It Gets Better México",
+        "categoria": "Contención en Crisis",
+        "telefono": "Atención confidencial web",
+        "sitio_web": "https://itgetsbetter.org/mexico",
+        "descripcion": "Red de prevención de crisis e inspiración para jóvenes.",
+        "historia": "Filial del movimiento global nacido para combatir el suicidio juvenil compartiendo historias de esperanza.",
+        "ubicacion": "Atención principal 100% en línea.",
+        "tipo_ayuda": ["'La Hora Segura' (Chat de apoyo)", "Recursos educativos", "Conexión comunitaria"]
+    },
+    {
+        "id": 6,
+        "nombre": "Centro de Apoyo CAIT",
+        "categoria": "Incidencia y Comunidad",
+        "telefono": "55 2753 8095",
+        "sitio_web": "https://cait.org.mx",
+        "descripcion": "Defensa de DDHH e identidades trans desde base comunitaria.",
+        "historia": "Organización constituida en 2011 que trabaja a través de movilización, educación entre pares e incidencia política.",
+        "ubicacion": "Ciudad de México (Atención presencial y redes).",
+        "tipo_ayuda": ["Fondo de apoyo emergente", "Asesoría a personas trans precarizadas", "Acompañamiento en derechos"]
+    }
+]
