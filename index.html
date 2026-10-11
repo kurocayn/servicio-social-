@@ -6,8 +6,9 @@
     <title>Faro de Conexión - Red de Apoyo CDMX</title>
     <style>
         :root {
-            --primary-color: #2C3E50; /* Color oscuro del faro */
+            --primary-color: #2C3E50; 
             --secondary-color: #5856D6;
+            --social-color: #E1306C; /* Color genérico para diferenciar redes */
             --bg-color: #F4F4F9;
             --card-bg: #FFFFFF;
             --text-color: #333333;
@@ -93,11 +94,29 @@
         .extra-info strong { color: var(--secondary-color); }
         .extra-info ul { margin: 5px 0 15px 0; padding-left: 20px; }
         
-        .btn-visitar {
-            display: block; text-align: center; background-color: var(--secondary-color);
-            color: white; text-decoration: none; padding: 10px; border-radius: 8px;
-            font-weight: bold; position: absolute; bottom: 25px; width: calc(100% - 50px);
+        /* Contenedor de botones divididos */
+        .botones-container {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            bottom: 25px;
+            width: calc(100% - 50px);
         }
+        .btn-accion {
+            flex: 1;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            padding: 10px 5px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: opacity 0.3s;
+        }
+        .btn-accion:hover { opacity: 0.8; }
+        .btn-web { background-color: var(--secondary-color); }
+        .btn-social { background-color: var(--primary-color); }
+
         .error-msg { text-align: center; color: var(--danger-color); font-weight: bold; grid-column: 1 / -1; padding: 20px; border: 2px dashed var(--danger-color); border-radius: 8px;}
     </style>
 </head>
@@ -128,11 +147,9 @@
             const contenedor = document.getElementById('directorio-contenedor');
             
             try {
-                // Hacemos el llamado (fetch) al archivo JSON separado
                 const response = await fetch('datos.json');
-                if (!response.ok) {
-                    throw new Error('Error al cargar el archivo JSON.');
-                }
+                if (!response.ok) throw new Error('Error al cargar el archivo JSON.');
+                
                 const instituciones = await response.json();
                 
                 instituciones.forEach(inst => {
@@ -151,19 +168,19 @@
                                 <ul>${listaAyuda}</ul>
                             </div>
                             
-                            <a href="${inst.sitio_web}" target="_blank" class="btn-visitar">Ir al Sitio Web Oficial</a>
+                            <div class="botones-container">
+                                <a href="${inst.sitio_web}" target="_blank" class="btn-accion btn-web">🌐 Sitio Web</a>
+                                <a href="${inst.red_social}" target="_blank" class="btn-accion btn-social">📱 ${inst.nombre_red}</a>
+                            </div>
                         </div>
                     `;
                     contenedor.innerHTML += tarjeta;
                 });
             } catch (error) {
-                // Mensaje de error si se abre el HTML directamente sin Live Server
                 contenedor.innerHTML = `
                 <div class="error-msg">
                     ⚠️ Error de conexión: No se pudo cargar 'datos.json'.<br><br>
-                    Para que la página web pueda leer el archivo JSON separado de manera local, 
-                    debes abrir el archivo 'index.html' usando la extensión <strong>Live Server</strong> en VS Code. 
-                    (De lo contrario, el navegador bloqueará la lectura del archivo por políticas de seguridad CORS).
+                    Si estás en GitHub Pages, revisa que el archivo esté todo en minúsculas.
                 </div>`;
                 console.error('Error:', error);
             }
